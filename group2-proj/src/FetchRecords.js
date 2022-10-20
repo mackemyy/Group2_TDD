@@ -6,7 +6,6 @@ const FetchRecords = (props) => {
 	const [records, setRecords] = useState([]);
 	const [totalUsers, setTotalUsers] = useState(0);
 	const [showViewDetails, setViewDetails] = useState(false);
-	let [selectedUser, setSelectedUser] = useState('');
 
 	const fetchData = async () => {
 		const response = await fetch(
@@ -17,10 +16,11 @@ const FetchRecords = (props) => {
 	  	setTotalUsers(response.length);
 	};
 
-	const handleViewDetails = () => {
-		selectedUser = records.id;
-		setSelectedUser(selectedUser);
+	const handleViewDetails = (userID) => {
+        
 		setViewDetails(true);
+        console.log(userID);
+        
 	}
 
 
@@ -66,7 +66,7 @@ const FetchRecords = (props) => {
 			<h2 data-testid="total-users">Total Customers: {totalUsers}</h2>
 		</>
 	): (
-		 <ViewDetails userID={selectedUser}/>
+		 <ViewDetails/>
 		// <p>Fetching...</p>
 	)
 };
