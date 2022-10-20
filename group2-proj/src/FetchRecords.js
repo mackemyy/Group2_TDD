@@ -11,16 +11,16 @@ const FetchRecords = (props) => {
 		const response = await fetch(
 			"https://jsonplaceholder.typicode.com/users"
 	  	).then((response) => response.json());
-		//
 	  	setRecords(response);
 	  	setTotalUsers(response.length);
 	};
 
-	const handleViewDetails = (userID) => {
-        
+	const handleBackToDashboard = () => {
+		setViewDetails(false);
+	}
+
+	const handleViewDetails = () => {
 		setViewDetails(true);
-        console.log(userID);
-        
 	}
 
 
@@ -66,7 +66,7 @@ const FetchRecords = (props) => {
 			<h2 data-testid="total-users">Total Customers: {totalUsers}</h2>
 		</>
 	): (
-		 <ViewDetails/>
+        <ViewDetails viewDetails={handleBackToDashboard}/>
 		// <p>Fetching...</p>
 	)
 };

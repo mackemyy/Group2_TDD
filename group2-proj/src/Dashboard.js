@@ -4,6 +4,7 @@ import FetchRecords from "./FetchRecords";
 
 const Dashboard = (props) => { 
 
+    
 	const [token, setToken] = useState(props ? props.token : ''); 
 	const onLogout = (evt) => {
 		const { logout } = props; 
