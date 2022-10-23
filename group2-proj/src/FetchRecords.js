@@ -2,11 +2,11 @@ import { useEffect, useState } from 'react';
 
 import ViewDetails from './ViewDetails';
 
-const FetchRecords = (props) => {
+const FetchRecords = () => {
 	const [records, setRecords] = useState([]);
 	const [totalUsers, setTotalUsers] = useState(0);
 	const [showViewDetails, setViewDetails] = useState(false);
-	const [IndivUser, setIndivuser] = useState();
+	const [userID, setUserID] = useState('');
 
 	const fetchData = async () => {
 		const response = await fetch(
@@ -20,9 +20,13 @@ const FetchRecords = (props) => {
 		setViewDetails(false);
 	}
 
-	const handleViewDetails = (user) => {
+	// const handleViewDetails = () => {
+	// 	setViewDetails(true);
+	// }
+
+	const handleViewDetails = (userID) => {
 		setViewDetails(true);
-		setIndivuser(user);
+		setUserID(userID);
 	}
 
 
@@ -51,7 +55,8 @@ const FetchRecords = (props) => {
 							<td>{records.username}</td>
 							<td>{records.email}</td>
 							<td>{records.phone}</td>
-							<td ><button onClick={handleViewDetails(records[i])}>View Details</button></td>
+							{/* <td ><button onClick={handleViewDetails(records[i])}>View Details</button></td> */}
+							<td><a href="#\" onClick={handleViewDetails.bind(this, records.id)}>View Details</a></td>
 						</tr>
 					))}
 				</tbody>
@@ -68,7 +73,8 @@ const FetchRecords = (props) => {
 			<h2 data-testid="total-users">Total Customers: {totalUsers}</h2>
 		</>
 	): (
-        <ViewDetails user={IndivUser} viewTable={handleBackToDashboard}/>
+		//<ViewDetails user={indivUser} viewTable={handleBackToDashboard}/>
+		<ViewDetails indivUser={userID} viewTable={handleBackToDashboard}/>
 		// <p>Fetching...</p>
 	)
 };

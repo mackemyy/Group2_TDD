@@ -5,20 +5,30 @@ import Dashboard from './Dashboard';
 const ViewDetails = (props) => {
     //const [details, setDetails] = useState([]);
     const [showDashboard, setShowDashboard] = useState(false);
-    const [indivUser, setIndivUser] = useState();
+    const [indivUser, setIndivUser] = useState(props ? props.indivUser : '');
+    //onst [indivUser, setIndivUser] = useState();
 
     const onViewTable = (evt) => {
         const { viewTable } = props;
-        setShowDashboard(true);
-        setIndivUser('');
+        setShowDashboard(false);
         if(viewTable) {
             viewTable();
         }
     }
 
-    const handleIndivUser = () => {
-        setIndivUser(props.indivUser);
+    const fetchData = async () => {
+        const response = await fetch(
+            "https://jsonplacehold.typicode.com/users"
+        ).then((response) => response.json());
+        console.log(indivUser);
+        setIndivUser(response);
     }
+
+    
+
+    // const handleIndivUser = () => {
+    //     setIndivUser(props.indivUser);
+    // }
     // const fetchData = async() => {
     //     const response = await fetch(
     //         "https://jsonplaceholder.typicode.com/users/${id}"
@@ -28,7 +38,7 @@ const ViewDetails = (props) => {
     // }
    
     useEffect(() => {
-        handleIndivUser();
+        fetchData();
     },);
 
     return !showDashboard ? (
