@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    
+    <style type=text/css>
+        html, body{
+            height: 100%;
+            margin: 0px;
+            overflow-y: hidden;
+            
+        }
+        .left{
+            height: 100%; width: 20%; 
+            background-color:#FF005B;
+            
+        }
+        .right{
+            height: 100%; width: 80%;
+            background-color: white;
+            margin:0px;
+        }
+        div{
+            font-family: "Roboto";
+        }
+        .topnav{
+            display: flex;
+            text-align: right;
+            height:10%; width: 100%;
+            margin-top:5px;
+            padding: 0px;
+            align-items: center;    /* aligns vertically */
+            justify-content: center;
+        }
+        .content{
+            display: flex;
+            height:90%; width:100%;
+            background-color: white;
+            align-items: center;    /* aligns vertically */
+            justify-content: center;
+        }
+        .container{
+            
+            height:95%; width: 95%;
+            box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 20px 50px 0 rgba(0,0,0,0.19);
+            border-radius: 25px;
+            background-color: white;
+            
+        }
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            background-color: #FF005B;
+        }
+        li a {
+            display: block;
+            color: #000;
+            padding: 15px 15px;
+            text-decoration: none;
+            color: white;
+            font-family: "Roboto";
+            font-size: larger;
+            margin-bottom:15px;
+            margin-left: 10px;
+            background-color: #FF005B;
+            transition: background-color 0.2s;
+            border-bottom-left-radius: 25px;
+            border-top-left-radius: 25px;
+        }
+        li a:hover, li a:active {
+            background-color: white;
+            border-bottom-left-radius: 25px;
+            border-top-left-radius: 25px;
+            color: #FF005B;
+        }
+        table{
+            margin: 30px 10px 10px 10px;
+            width: 99%;
+            border-style: none;
+        }
+        th{
+            background-color: whitesmoke;
+            border-style: none;
+        }
+        td{
+            width: 12%;
+        }
+    
+    </style>
+
+    <title>
+
+    </title>
+    <head>
+
+    </head>
+    <body>
+        <div class="left" style="float: left;">
+            <div>
+                <h1 style="text-align:center; color:white; padding-bottom: 10%;">Custom App</h1>
+                <br/>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">News</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">About</a></li>
+                  </ul>
+                  
+            </div>
+
+        </div>
+        <div class="right" style="float: left">
+            <div class="topnav">
+                <div class="container">
+                    <div style="float:left;">
+                        <h1> Viewing Users</h1>
+
+                    </div>
+                    <div>
+                        <p>Welcome User  <a href="#">Logout</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="content">
+                <!-- put table here within div, div has shadows -->
+                <div class="container">
+                    <table>
+                        <tr>
+                          <th>ID</th>
+                          <th>Name</th>
+                          <th>Username</th>
+                          <th>Email</th>
+                          <th>Phone</th>
+                          <th>Action</th>
+                        </tr>
+                        <tr>
+                          <td>1</td>
+                          <td>John Doe</td>
+                          <td>John_Doe</td>
+                          <td>johndoe@gmail.com</td>
+                          <td>+639123456789</td>
+                          <td><a href=#>View Details</a></td>
+                        </tr>
+                      </table>
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>
