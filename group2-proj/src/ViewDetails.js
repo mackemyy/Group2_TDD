@@ -4,9 +4,8 @@ import Dashboard from './Dashboard';
 
 const ViewDetails = (props) => {
     const [showDashboard, setShowDashboard] = useState(false);
-    const [indivUser, setIndivUser] = useState(props ? props.indivUser : '');
+    const [indivUser] = useState(props ? props.indivUser : '');
     const [userDetails, setUserDetails] = useState([]);
-    //onst [indivUser, setIndivUser] = useState();
 
     const onViewTable = (evt) => {
         const { viewTable } = props;
@@ -18,23 +17,10 @@ const ViewDetails = (props) => {
 
     const fetchData = async () => {
         const response = await fetch(
-            ("https://jsonplaceholder.typicode.com/users/"+indivUser)
+            "https://jsonplaceholder.typicode.com/users/"+indivUser
         ).then((response) => response.json());
         setUserDetails(response);
     }
-
-    
-
-    // const handleIndivUser = () => {
-    //     setIndivUser(props.indivUser);
-    // }
-    // const fetchData = async() => {
-    //     const response = await fetch(
-    //         "https://jsonplaceholder.typicode.com/users/${id}"
-    //     ).then((response) => response.json());
-
-    //     setDetails(response);
-    // }
    
     useEffect(() => {
         fetchData();
@@ -46,11 +32,16 @@ const ViewDetails = (props) => {
             <table>
                 <thead>
                     <tr>
-                        <th>Details</th>
+                        <th>ID</th>
+						<th>Name</th>
+						<th>Username</th>
+						<th>Address</th>
+						<th>Website</th>
+						<th>Company</th>
                     </tr>
                 </thead>
                 <tbody>
-                { userDetails.length && userDetails.map((userDetails, i) => (
+                { userDetails.length && userDetails.map((userDetails) => (
                     <tr>
                         <td>{userDetails.id}</td>
                         <td>{userDetails.name}</td>
@@ -58,7 +49,6 @@ const ViewDetails = (props) => {
                         <td>{userDetails.address}</td>
                         <td>{userDetails.website}</td>
                         <td>{userDetails.company}</td>
-                        
                     </tr>
                     ))}
                 </tbody>

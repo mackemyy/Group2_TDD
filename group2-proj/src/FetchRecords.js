@@ -20,10 +20,6 @@ const FetchRecords = () => {
 		setViewDetails(false);
 	}
 
-	// const handleViewDetails = () => {
-	// 	setViewDetails(true);
-	// }
-
 	const handleViewDetails = (userID) => {
 		setViewDetails(true);
 		setUserID(userID);
@@ -55,7 +51,6 @@ const FetchRecords = () => {
 							<td>{records.username}</td>
 							<td>{records.email}</td>
 							<td>{records.phone}</td>
-							{/* <td ><button onClick={() => this.handleViewDetails(records.id)}>View Details</button></td> */}
 							{/* <td ><button onClick={handleViewDetails(records[i])}>View Details</button></td> */}
 							<td><a href="#\" onClick={handleViewDetails.bind(this, records.id)}>View Details</a></td>
 						</tr>
@@ -76,7 +71,6 @@ const FetchRecords = () => {
 	): (
 		//<ViewDetails user={indivUser} viewTable={handleBackToDashboard}/>
 		<ViewDetails indivUser={userID} viewTable={handleBackToDashboard}/>
-		// <p>Fetching...</p>
 	)
 };
 
