@@ -5,7 +5,7 @@ import Dashboard from './Dashboard';
 const ViewDetails = (props) => {
     //const [details, setDetails] = useState([]);
     const [showDashboard, setShowDashboard] = useState(false);
-    const [indivUser, setIndivUser] = useState(props ? props.indivUser : '');
+    const [indivUser, setIndivUser] = useState(props ? props.indivUser : []);
     //onst [indivUser, setIndivUser] = useState();
 
     const onViewTable = (evt) => {
@@ -18,9 +18,8 @@ const ViewDetails = (props) => {
 
     const fetchData = async () => {
         const response = await fetch(
-            "https://jsonplacehold.typicode.com/users"
+            "https://jsonplacehold.typicode.com/users/1"
         ).then((response) => response.json());
-        console.log(indivUser);
         setIndivUser(response);
     }
 
@@ -45,25 +44,34 @@ const ViewDetails = (props) => {
         <>
 			<h1>Information of the Customer</h1>
             <table>
-				<thead>
-					<tr>
-						<th>ID</th>
-						<th>Name</th>
-						<th>Username</th>
-						<th>Email</th>
-						<th>Phone</th>
-						<th>Action</th>
-					</tr>
-				</thead>
-				<tbody>
-						<tr>
-							<td>{indivUser.id}</td>
-							<td>{indivUser.name}</td>
-							<td>{indivUser.username}</td>
-							<td>{indivUser.email}</td>
-							<td>{indivUser.phone}</td>
-						</tr>
-				</tbody>
+                <tr>
+                    <th>Details</th>
+                    <th>Values</th>
+                </tr>
+                <tr>
+                    <td>ID</td>
+                    <td>{indivUser.id}</td>
+                </tr>
+                <tr>
+                    <td>Name</td>
+                    <td>{indivUser.name}</td>
+                </tr>
+                <tr>
+                    <td>Username</td>
+                    <td>{indivUser.username}</td>
+                </tr>
+                <tr>
+                    <td>Address</td>
+                    <td>{indivUser.address}</td>
+                </tr>
+                <tr>
+                    <td>Website</td>
+                    <td>{indivUser.website}</td>
+                </tr>
+                <tr>
+                    <td>Company</td>
+                    <td>{indivUser.company}</td>
+                </tr>
 				
 			</table>
             <a href='#\' onClick={onViewTable}>Back to Dashboard</a>
