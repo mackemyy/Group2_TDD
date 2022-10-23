@@ -3,9 +3,9 @@ import { useEffect, useState } from 'react';
 import Dashboard from './Dashboard';
 
 const ViewDetails = (props) => {
-    //const [details, setDetails] = useState([]);
     const [showDashboard, setShowDashboard] = useState(false);
-    const [indivUser, setIndivUser] = useState(props ? props.indivUser : []);
+    const [indivUser, setIndivUser] = useState(props ? props.indivUser : '');
+    const [userDetails, setUserDetails] = useState([]);
     //onst [indivUser, setIndivUser] = useState();
 
     const onViewTable = (evt) => {
@@ -18,9 +18,9 @@ const ViewDetails = (props) => {
 
     const fetchData = async () => {
         const response = await fetch(
-            "https://jsonplacehold.typicode.com/users/1"
+            ("https://jsonplaceholder.typicode.com/users/"+indivUser)
         ).then((response) => response.json());
-        setIndivUser(response);
+        setUserDetails(response);
     }
 
     
@@ -44,37 +44,28 @@ const ViewDetails = (props) => {
         <>
 			<h1>Information of the Customer</h1>
             <table>
-                <tr>
-                    <th>Details</th>
-                    <th>Values</th>
-                </tr>
-                <tr>
-                    <td>ID</td>
-                    <td>{indivUser.id}</td>
-                </tr>
-                <tr>
-                    <td>Name</td>
-                    <td>{indivUser.name}</td>
-                </tr>
-                <tr>
-                    <td>Username</td>
-                    <td>{indivUser.username}</td>
-                </tr>
-                <tr>
-                    <td>Address</td>
-                    <td>{indivUser.address}</td>
-                </tr>
-                <tr>
-                    <td>Website</td>
-                    <td>{indivUser.website}</td>
-                </tr>
-                <tr>
-                    <td>Company</td>
-                    <td>{indivUser.company}</td>
-                </tr>
-				
+                <thead>
+                    <tr>
+                        <th>Details</th>
+                    </tr>
+                </thead>
+                <tbody>
+                { userDetails.length && userDetails.map((userDetails, i) => (
+                    <tr>
+                        <td>{userDetails.id}</td>
+                        <td>{userDetails.name}</td>
+                        <td>{userDetails.username}</td>
+                        <td>{userDetails.address}</td>
+                        <td>{userDetails.website}</td>
+                        <td>{userDetails.company}</td>
+                        
+                    </tr>
+                    ))}
+                </tbody>
 			</table>
+            <p>{indivUser}</p>
             <a href='#\' onClick={onViewTable}>Back to Dashboard</a>
+
         </>
     ) : (
         <Dashboard/>
