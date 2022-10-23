@@ -2,6 +2,7 @@ import { useState } from "react";
 
 import Dashboard from './Dashboard';
 
+
 const Login = () => {
 	const [showDashboard, setShowDashboard] = useState(false);
 
@@ -63,29 +64,45 @@ const Login = () => {
 
 	return !showDashboard ? ( 
 		<>
-			<input 
-				placeholder="Enter Email"
-				type="text"
-				onChange={onChange}
-				data-testid="email"
-				name="email"
-			/><br />
-			<input 
-				placeholder="Enter password"
-				type="password"
-				onChange={onChange}
-				data-testid="password"
-				name="password"
-			/>
-			<br/>
-			<button
-				onClick={handleUserLogin} 
-				data-testid="send-user-login"
-			>
-				Login
-			</button>
-			<br/>
-			<h2 data-testid="result">Server Reply: {result}</h2>
+			<div class="center">
+				<div class="left">
+					<div class="container">
+						<h1>Welcome to React Learning Center</h1>
+						<img 
+      src="https://www.nrclc.com/wp-content/uploads/2014/01/Training.jpg"
+      alt="new"
+      />
+					</div>
+				</div>
+				<div class='right'>
+					<h1>Email:</h1>
+					<input 
+						placeholder="Enter Email"
+						type="text"
+						onChange={onChange}
+						data-testid="email"
+						name="email"
+					/><br />
+
+					<h1>Password:</h1>
+					<input 
+						placeholder="Enter password"
+						type="password"
+						onChange={onChange}
+						data-testid="password"
+						name="password"
+					/>
+					<br/><br/>
+					<button
+						onClick={handleUserLogin} 
+						data-testid="send-user-login"
+					>
+						Login
+					</button>
+					<br/>
+					<h2 data-testid="result">Server Reply: {result}</h2>
+				</div>
+			</div>
 		</>
 	) : (
 
