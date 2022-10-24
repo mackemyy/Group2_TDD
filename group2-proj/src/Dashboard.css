@@ -4,10 +4,6 @@ html, body{
     overflow-y: hidden;
     
 }
-/* .header {
-    max-width: 500px;
-    margin: auto;
-} */
 .left{
     height: 100%; width: 20%; 
     background-color:#8F00ff;
@@ -46,16 +42,15 @@ div{
     
 }
 .navbar {
-  /* list-style-type: none;
+  list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #8F00ff; */
-  float: left;
+  background-color: #8F00ff;
     display: block;
     color: white;
     text-align: center;
-    padding: 14px 16px;
+    padding: 14px;
     text-decoration: none;
 }
 .list{
@@ -63,7 +58,7 @@ div{
     display: block;
     color: white;
     text-align: center;
-    padding: 14px 16px;
+    padding: 14px;
     background-color: #8F00ff;
     transition: background-color 0.2s;
     text-decoration: none;
@@ -82,19 +77,26 @@ ul {
     background-color: #8F00ff;
 }
 li a {
-    /* display: block; */
-    color: #000;
-    text-align: center;
-    padding: 14px 14px;
-    text-decoration: none;
+    /* padding-left: 200px;
+    display: block;
     color: white;
+    text-align: center;
+    padding: 14px;
     font-family: "Roboto";
     font-size: larger;
-    margin-bottom:15px;
-    margin-left: 90%;
     background-color: #8F00ff;
     transition: background-color 0.2s;
-    border-radius: 12px;
+    text-decoration: none;
+    border-radius: 12px; */
+    float: right;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px;
+    margin-right: 50px;
+    background-color: #8F00ff;
+    transition: background-color 0.2s;
+    text-decoration: none; 
 }
 li a:hover, li a:active {
     background-color: white;

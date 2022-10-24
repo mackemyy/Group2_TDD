@@ -22,11 +22,9 @@ const Dashboard = (props) => {
 					<li class = "list">Home</li>
                     <li class = "list">News</li>
                     <li class = "list">Contact</li>
-                    <li class = "list">About</li>
-				</ul>
-				<br/>
-				<ul>
 					<li><a href='#\' onClick={onLogout}>Logout</a></li>
+				</ul>
+				<ul>
 					<li>user {token}</li>
 				</ul>
 			</div>
