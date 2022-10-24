@@ -1,26 +1,3 @@
-html, body{
-    height: 100%;
-    margin: 0px;
-    overflow-y: hidden;
-    
-}
-/* .header {
-    max-width: 500px;
-    margin: auto;
-} */
-.left{
-    height: 100%; width: 20%; 
-    background-color:#8F00ff;
-    
-}
-.right{
-    height: 100%; width: 80%;
-    background-color: white;
-    margin:0px;
-}
-div{
-    font-family: "Roboto";
-}
 .topnav{
     display: flex;
     text-align: right;
@@ -59,28 +36,29 @@ div{
     text-decoration: none;
 }
 .list{
+    font-family: 'Poppins';
     float: left;
     display: block;
-    color: white;
+    color: black;
     text-align: center;
     padding: 14px 16px;
-    background-color: #8F00ff;
+    background-color: #ffd6ff;
     transition: background-color 0.2s;
     text-decoration: none;
 }
 .navbar :hover {
-    background-color: white;
+    background-color: #c8b6ff;
     border-radius: 12px;
-    color: #8F00ff;
+    color: black;
 }
-
 ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
     width: 100%;
-    background-color: #8F00ff;
+    background-color: #ffd6ff;
 }
+
 li a {
     /* display: block; */
     color: #000;
@@ -88,18 +66,18 @@ li a {
     padding: 14px 14px;
     text-decoration: none;
     color: white;
-    font-family: "Roboto";
+    font-family: "Poppins";
     font-size: larger;
     margin-bottom:15px;
     margin-left: 90%;
-    background-color: #8F00ff;
+    background-color: #c8b6ff;
     transition: background-color 0.2s;
     border-radius: 12px;
 }
 li a:hover, li a:active {
     background-color: white;
     border-radius: 12px;
-    color: #8F00ff;
+    color: #c8b6ff;
 }
 table{
     margin: 30px 10px 10px 10px;
