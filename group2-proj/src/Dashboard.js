@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import './Dashboard.css';
 import FetchRecords from "./FetchRecords";
 
 const Dashboard = (props) => { 
@@ -16,13 +16,23 @@ const Dashboard = (props) => {
 
 	return(
 		<>
-			<h1>Menu(navbar ni diri)</h1>
-			<ul>
-				<li>user {token}</li>
-				<li><a href='#\' onClick={onLogout}>Logout</a></li>
-			</ul>
+			<div class = "header">
+				{/* <h1>Menu</h1> */}
+				<ul class = "navbar">
+					<li class = "list">Home</li>
+                    <li class = "list">News</li>
+                    <li class = "list">Contact</li>
+                    <li class = "list">About</li>
+				</ul>
+				<br/>
+				<ul>
+					<li><a href='#\' onClick={onLogout}>Logout</a></li>
+					<li>user {token}</li>
+				</ul>
+			</div>
+
 			<h2>List of Customers</h2>
-			<ul>
+			<ul class="listname">
 				{
 					<FetchRecords/>
 				}
