@@ -32,10 +32,10 @@ const FetchRecords = () => {
 
 	return !showViewDetails ? (
 		<>
-			<table>
+			<table data-testid="dashboardTable">
 				<thead>
 					<tr>
-						<th>ID</th>
+						<th data-testid="tableHeader">ID</th>
 						<th>Name</th>
 						<th>Username</th>
 						<th>Email</th>
@@ -45,11 +45,12 @@ const FetchRecords = () => {
 				<tbody>
 					{ records.length && records.map((records, i)=> (
 						<tr>
-							<td data-testid="userID">{records.id}</td>
-							<td data-testid="name">{records.name}</td>
-							<td data-testid="username">{records.username}</td>
-							<td data-testid="userEmail">{records.email}</td>
-							<td><a href="#\" data-testid="viewDetailsLink" onClick={handleViewDetails.bind(this, records.id)}>View Details</a></td>
+							<td key={i}data-testid="user">{records.id}</td>
+							<td key={i}data-testid="user">{records.name}</td>
+							<td key={i}data-testid="user">{records.username}</td>
+							<td key={i}data-testid="user">{records.email}</td>
+							<td><button data-testid="view-details-btn" onClick={handleViewDetails.bind(this, records.id)}>View Details</button></td>
+							{/* <td><a href="#\" data-testid="viewDetails" onClick={handleViewDetails.bind(this, records.id)}>View Details</a></td> */}
 						</tr>
 					))}
 				</tbody>

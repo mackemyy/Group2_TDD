@@ -18,8 +18,8 @@ const Dashboard = (props) => {
 		<>
 			<h1>Menu(navbar ni diri)</h1>
 			<ul>
-				<li>user {token}</li>
-				<li><a href='#\' onClick={onLogout}>Logout</a></li>
+				<li data-testid="token">User Token: {token}</li>
+				<button data-testid="logout-btn" onClick={onLogout}>Logout</button>
 			</ul>
 			<h2>List of Customers</h2>
 			<ul>
