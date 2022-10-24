@@ -29,32 +29,31 @@ const ViewDetails = (props) => {
     return !showDashboard ? (
         <>
 			<h1>Information of the Customer</h1>
-            <table>
+            <table data-testid="detailsTable">
                 <thead>
                     <tr>
-                        <th>ID</th>
+                        <th data-testid="tableHeader">ID</th>
 						<th>Name</th>
 						<th>Username</th>
-						<th>Address</th>
+                        <th>Phone</th>
+                        <th>Email</th>
 						<th>Website</th>
-						<th>Company</th>
+                        {/* <th>Address</th> */}
                     </tr>
                 </thead>
                 <tbody>
-                { userDetails.length && userDetails.map((userDetails) => (
                     <tr>
-                        <td>{userDetails.id}</td>
+                        <td data-testid="userID">{userDetails.id}</td>
                         <td>{userDetails.name}</td>
                         <td>{userDetails.username}</td>
-                        <td>{userDetails.address}</td>
+                        <td>{userDetails.phone}</td>
+                        <td>{userDetails.email}</td>
                         <td>{userDetails.website}</td>
-                        <td>{userDetails.company}</td>
+                        {/* <td>{userDetails.address.street}</td> */}
                     </tr>
-                    ))}
                 </tbody>
 			</table>
-            <p>{indivUser}</p>
-            <a href='#\' onClick={onViewTable}>Back to Dashboard</a>
+            <a href='#\' data-testid="dashboardLink" onClick={onViewTable}>Back to Dashboard</a>
 
         </>
     ) : (
