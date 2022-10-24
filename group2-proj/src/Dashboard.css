@@ -1,0 +1,116 @@
+html, body{
+    height: 100%;
+    margin: 0px;
+    overflow-y: hidden;
+    
+}
+/* .header {
+    max-width: 500px;
+    margin: auto;
+} */
+.left{
+    height: 100%; width: 20%; 
+    background-color:#8F00ff;
+    
+}
+.right{
+    height: 100%; width: 80%;
+    background-color: white;
+    margin:0px;
+}
+div{
+    font-family: "Roboto";
+}
+.topnav{
+    display: flex;
+    text-align: right;
+    height:10%; width: 100%;
+    margin-top:5px;
+    padding: 0px;
+    align-items: center;    /* aligns vertically */
+    justify-content: center;
+}
+.content{
+    display: flex;
+    height:90%; width:100%;
+    background-color: white;
+    align-items: center;    /* aligns vertically */
+    justify-content: center;
+}
+.container{
+    
+    height:95%; width: 95%;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 20px 50px 0 rgba(0,0,0,0.19);
+    border-radius: 25px;
+    background-color: white;
+    
+}
+.navbar {
+  /* list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #8F00ff; */
+  float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+.list{
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    background-color: #8F00ff;
+    transition: background-color 0.2s;
+    text-decoration: none;
+}
+.navbar :hover {
+    background-color: white;
+    border-radius: 12px;
+    color: #8F00ff;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-color: #8F00ff;
+}
+li a {
+    /* display: block; */
+    color: #000;
+    text-align: center;
+    padding: 14px 14px;
+    text-decoration: none;
+    color: white;
+    font-family: "Roboto";
+    font-size: larger;
+    margin-bottom:15px;
+    margin-left: 90%;
+    background-color: #8F00ff;
+    transition: background-color 0.2s;
+    border-radius: 12px;
+}
+li a:hover, li a:active {
+    background-color: white;
+    border-radius: 12px;
+    color: #8F00ff;
+}
+table{
+    margin: 30px 10px 10px 10px;
+    width: 99%;
+    border-style: none;
+}
+th{
+    background-color: #D9C4EC;
+    border-style: none;
+    text-align: center;
+}
+td{
+    width: 12%;
+}
