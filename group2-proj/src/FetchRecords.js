@@ -33,6 +33,7 @@ const FetchRecords = () => {
 	return !showViewDetails ? (
 		<>
 			<table data-testid="dashboardTable">
+			<h2>List of Students</h2>
 				<thead>
 					<tr>
 						<th data-testid="tableHeader">ID</th>
@@ -56,7 +57,7 @@ const FetchRecords = () => {
 				</tbody>
 				
 			</table>
-			<h2 data-testid="total-users">Total Customers: {totalUsers}</h2>
+			<h2 data-testid="total-users">Total Students: {totalUsers}</h2>
 		</>
 	): (
 		<ViewDetails indivUser={userID} viewTable={handleBackToDashboard}/>

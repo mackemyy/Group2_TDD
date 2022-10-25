@@ -29,11 +29,8 @@ const Dashboard = (props) => {
 						Logout
 					</button></li>
 				</ul>
-				<ul>
-					<li class = "user" data-testid="token">user {token}</li>
-				</ul>
+				<div class = "username">User {token} </div> 
 			</div>
-			<h2>List of Customers</h2>
 			<ul class="listname">
 				{
 					<FetchRecords/>
