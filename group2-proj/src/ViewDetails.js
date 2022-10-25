@@ -53,7 +53,7 @@ const ViewDetails = (props) => {
                     </tr>
                 </tbody>
 			</table>
-            <button data-testid="back-dashboard-btn" onClick={onViewTable}>Back to Dashboard</button>
+            <button class="back" data-testid="back-dashboard-btn" onClick={onViewTable}>Back to Dashboard</button>
             {/* <a href='#\' data-testid="dashboardLink" onClick={onViewTable}>Back to Dashboard</a> */}
 
         </>
