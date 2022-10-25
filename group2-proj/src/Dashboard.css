@@ -1,11 +1,4 @@
-html, body{
-    height: 100%;
-    margin: 0px;
-    overflow-y: hidden;   
-}
-div{
-    font-family: "Roboto";
-}
+
 .topnav{
     display: flex;
     text-align: right;
@@ -36,29 +29,30 @@ div{
     text-decoration: none;
 }
 .list{
+    font-family: 'Poppins';
     float: left;
     display: block;
-    color: white;
+    color: black;
     text-align: center;
-    padding: 14px;
+    padding: 14px 16px;
     background-color: #8F00ff;
     transition: background-color 0.2s;
     text-decoration: none;
     border-right: 1px solid #bbb;
 }
 .navbar :hover {
-    background-color: white;
+    background-color: #c8b6ff;
     border-radius: 12px;
-    color: #8F00ff;
+    color: black;
 }
-
 ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
     width: 100%;
-    background-color: #8F00ff;
+    background-color: #ffd6ff;
 }
+
 li a {
     /* padding-left: 200px;
     display: block;
@@ -74,9 +68,10 @@ li a {
     float: right;
     display: block;
     color: white;
-    text-align: center;
-    padding: 14px;
-    margin-right: 50px;
+    font-family: "Roboto";
+    font-size: larger;
+    margin-bottom:15px;
+    margin-left: 90%;
     background-color: #8F00ff;
     transition: background-color 0.2s;
     text-decoration: none; 
@@ -84,7 +79,7 @@ li a {
 li a:hover, li a:active {
     background-color: white;
     border-radius: 12px;
-    color: #8F00ff;
+    color: #c8b6ff;
 }
 
 .user {
