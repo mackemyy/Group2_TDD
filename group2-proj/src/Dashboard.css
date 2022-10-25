@@ -1,12 +1,24 @@
-
+body {
+    overflow-y: scroll;
+}
+/* header {
+    position: fixed;
+    top: 0;
+    width: 100%
+} */
 .topnav{
-    display: flex;
+    position: fixed;
+    top: 0;
+    display: fixed;
     text-align: right;
-    height:10%; width: 100%;
+    height:10%; 
+    width: 100%;
     margin-top:5px;
     padding: 0px;
     align-items: center;    /* aligns vertically */
     justify-content: center;
+
+    
 }
 .content{
     display: flex;
@@ -54,27 +66,16 @@ ul {
 }
 
 li a {
-    /* padding-left: 200px;
+    font-family: 'Poppins';
+    float: left;
     display: block;
-    color: white;
+    color: black;
     text-align: center;
-    padding: 14px;
-    font-family: "Roboto";
-    font-size: larger;
+    padding: 14px 16px;
     background-color: #8F00ff;
     transition: background-color 0.2s;
     text-decoration: none;
-    border-radius: 12px; */
-    float: right;
-    display: block;
-    color: white;
-    font-family: "Roboto";
-    font-size: larger;
-    margin-bottom:15px;
-    margin-left: 90%;
-    background-color: #8F00ff;
-    transition: background-color 0.2s;
-    text-decoration: none; 
+    border-right: 1px solid #bbb;
 }
 li a:hover, li a:active {
     background-color: white;
@@ -101,6 +102,9 @@ table{
     width: 99%;
     border-style: none;
     text-align: center;
+    display: block;
+    overflow-y: scroll;
+    white-space: nowrap;
 }
 th{
     background-color: #D9C4EC;
