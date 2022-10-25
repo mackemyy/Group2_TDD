@@ -47,9 +47,10 @@ body {
     color: black;
     text-align: center;
     padding: 14px 16px;
-    background-color: #8F00ff;
+    background-color: #c8b6ff;
     transition: background-color 0.2s;
     text-decoration: none;
+    border-radius: 12px;
     border-right: 1px solid white;
 }
 .navbar :hover {
@@ -75,27 +76,18 @@ ul {
 }
 
 li a {
-    /* padding-left: 200px;
+    font-family: 'Poppins';
+    float: left;
+    margin-left: 75%;
     display: block;
-    color: white;
+    color: black;
     text-align: center;
-    padding: 14px;
-    font-family: "Roboto";
-    font-size: larger;
-    background-color: #8F00ff;
+    padding: 14px 16px;
+    background-color: #c8b6ff;
     transition: background-color 0.2s;
     text-decoration: none;
-    border-radius: 12px; */
-    float: right;
-    display: block;
-    color: white;
-    font-family: "Roboto";
-    font-size: larger;
-    margin-bottom:15px;
-    margin-left: 90%;
-    background-color: #8F00ff;
-    transition: background-color 0.2s;
-    text-decoration: none; 
+    border-radius: 12px;
+    border: 1px solid white;
 }
 li a:hover, li a:active {
     background-color: white;
