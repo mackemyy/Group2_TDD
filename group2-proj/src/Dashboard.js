@@ -29,7 +29,7 @@ const Dashboard = (props) => {
 						Logout
 					</button></li>
 				</ul>
-				<div class = "username">User {token} </div> 
+				<div class = "username">User Token:  {token} </div> 
 			</div>
 			<ul class="listname">
 				{

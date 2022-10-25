@@ -59,8 +59,8 @@ body {
     color: black;
 }
 .username {
-    font-family: "Roboto";
-    font-size: larger;
+    font-family: "Poppins";
+    font-size: medium;
     text-align: center;
     background-color: #ffd6ff;
     width: fit-content;
@@ -102,7 +102,7 @@ ul {
 }
 
 .user {
-    font-family: "Roboto";
+    font-family: "Poppins";
     font-size: larger;
     text-align: center;
 }

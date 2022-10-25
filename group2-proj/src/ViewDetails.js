@@ -28,7 +28,7 @@ const ViewDetails = (props) => {
 
     return !showDashboard ? (
         <>
-			<h1>Information of the Customer</h1>
+			<h1>Information of the Students</h1>
             <table data-testid="detailsTable">
                 <thead>
                     <tr>
