@@ -33,7 +33,7 @@ body {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #ffd6ff;
+  background-color: #c8b6ff;
     display: block;
     color: white;
     text-align: center;
@@ -47,16 +47,25 @@ body {
     color: black;
     text-align: center;
     padding: 14px 16px;
-    background-color: #ffd6ff;
+    background-color: #8F00ff;
     transition: background-color 0.2s;
     text-decoration: none;
-    border-right: 1px solid #bbb;
+    border-right: 1px solid white;
 }
 .navbar :hover {
-    background-color: #c8b6ff;
+    background-color: #9879f7;
     border-radius: 12px;
     color: black;
 }
+.user {
+    float: left;
+    display: block;
+    width: 100%;
+    text-align: end;
+    background-color: #c8b6ff;
+    padding-bottom:10px;
+}
+
 ul {
     list-style-type: none;
     margin: 0;
@@ -66,35 +75,39 @@ ul {
 }
 
 li a {
-    font-family: 'Poppins';
-    float: left;
+    /* padding-left: 200px;
     display: block;
-    color: black;
+    color: white;
     text-align: center;
-    padding: 14px 16px;
-    background-color: #ffd6ff;
+    padding: 14px;
+    font-family: "Roboto";
+    font-size: larger;
+    background-color: #8F00ff;
     transition: background-color 0.2s;
     text-decoration: none;
-    border-right: 1px solid #bbb;
+    border-radius: 12px; */
+    float: right;
+    display: block;
+    color: white;
+    font-family: "Roboto";
+    font-size: larger;
+    margin-bottom:15px;
+    margin-left: 90%;
+    background-color: #8F00ff;
+    transition: background-color 0.2s;
+    text-decoration: none; 
 }
 li a:hover, li a:active {
     background-color: white;
     border-radius: 12px;
-    color: #c8b6ff;
+    color: black;
 }
 
 .user {
     font-family: "Roboto";
     font-size: larger;
     text-align: center;
-    background-color: #ffd6ff;
-    width: 20%;
-    margin-top: 3mm;
-    margin-left: 5mm;
-    border-radius: 100px;
-    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 20px 50px 0 rgba(0,0,0,0.19);
 }
-
 .listname {
     margin: auto;
     width: 50%;
@@ -120,4 +133,14 @@ th{
 }
 td{
     width: 12%;
+}
+td button{
+    background-color: #bdccd5;
+    font-size: medium;
+    color: black;
+}
+button{
+    font-size: medium;
+    background-color: #bdccd5;
+    color: black;
 }
