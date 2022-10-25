@@ -33,31 +33,22 @@ body {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #c8b6ff;
+  background-color: #ffd6ff;
     display: block;
     color: white;
     text-align: center;
     padding: 14px;
     text-decoration: none;
 }
-.list{
+.title{
     font-family: 'Poppins';
     float: left;
     display: block;
     color: black;
     text-align: center;
-    padding: 14px 16px;
-    background-color: #c8b6ff;
-    transition: background-color 0.2s;
-    text-decoration: none;
-    border-radius: 12px;
-    border-right: 1px solid white;
+    font-size:xx-large;
 }
-.navbar :hover {
-    background-color: #9879f7;
-    border-radius: 12px;
-    color: black;
-}
+
 .username {
     font-family: "Poppins";
     font-size: medium;
