@@ -2,10 +2,11 @@ import { useEffect, useState } from 'react';
 
 import ViewDetails from './ViewDetails';
 
-const FetchRecords = (props) => {
+const FetchRecords = () => {
 	const [records, setRecords] = useState([]);
 	const [totalUsers, setTotalUsers] = useState(0);
 	const [showViewDetails, setViewDetails] = useState(false);
+	const [userID, setUserID] = useState('');
 
 	const fetchData = async () => {
 		const response = await fetch(
@@ -19,8 +20,9 @@ const FetchRecords = (props) => {
 		setViewDetails(false);
 	}
 
-	const handleViewDetails = () => {
+	const handleViewDetails = (userID) => {
 		setViewDetails(true);
+		setUserID(userID);
 	}
 
 
@@ -30,44 +32,34 @@ const FetchRecords = (props) => {
 
 	return !showViewDetails ? (
 		<>
-			<table>
+			<table data-testid="dashboardTable">
 				<thead>
 					<tr>
-						<th>ID</th>
+						<th data-testid="tableHeader">ID</th>
 						<th>Name</th>
 						<th>Username</th>
 						<th>Email</th>
-						<th>Phone</th>
 						<th>Action</th>
 					</tr>
 				</thead>
 				<tbody>
 					{ records.length && records.map((records, i)=> (
 						<tr>
-							<td>{records.id}</td>
-							<td>{records.name}</td>
-							<td>{records.username}</td>
-							<td>{records.email}</td>
-							<td>{records.phone}</td>
-							<td><a href="#\" onClick={handleViewDetails}>View Details</a></td>
+							<td key={i}data-testid="user">{records.id}</td>
+							<td key={i}data-testid="user">{records.name}</td>
+							<td key={i}data-testid="user">{records.username}</td>
+							<td key={i}data-testid="user">{records.email}</td>
+							<td><button data-testid="view-details-btn" onClick={handleViewDetails.bind(this, records.id)}>View Details</button></td>
+							{/* <td><a href="#\" data-testid="viewDetails" onClick={handleViewDetails.bind(this, records.id)}>View Details</a></td> */}
 						</tr>
 					))}
 				</tbody>
 				
 			</table>
-			{/* <h1>Users</h1>
-			<ul>
-			{ 	records.length && records.map((rec, i)=>(
-					<li key={i} data-testid='user'>{rec.id}</li>
-				))
-			}
-			</ul>
-			<h2 data-testid="total-users">Total Users: {totalUsers}</h2> */}
 			<h2 data-testid="total-users">Total Customers: {totalUsers}</h2>
 		</>
 	): (
-        <ViewDetails viewDetails={handleBackToDashboard}/>
-		// <p>Fetching...</p>
+		<ViewDetails indivUser={userID} viewTable={handleBackToDashboard}/>
 	)
 };
 

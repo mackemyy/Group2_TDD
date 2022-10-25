@@ -28,7 +28,6 @@ const Dashboard = (props) => {
 					<li class = "user">user {token}</li>
 				</ul>
 			</div>
-
 			<h2>List of Customers</h2>
 			<ul class="listname">
 				{
