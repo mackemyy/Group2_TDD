@@ -22,10 +22,9 @@ const Dashboard = (props) => {
 					<li class = "list">Home</li>
                     <li class = "list">News</li>
                     <li class = "list">Contact</li>
-					<li><a href='#\' onClick={onLogout}>Logout</a></li>
 				</ul>
 				<ul>
-					<li class = "user">user {token}</li>
+				<li class = "user">user {token} <a href='#\' onClick={onLogout}>Logout</a></li> 
 				</ul>
 			</div>
 			<h2>List of Customers</h2>

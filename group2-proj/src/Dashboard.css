@@ -21,7 +21,7 @@
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #8F00ff;
+  background-color: #c8b6ff;
     display: block;
     color: white;
     text-align: center;
@@ -35,16 +35,25 @@
     color: black;
     text-align: center;
     padding: 14px 16px;
-    background-color: #8F00ff;
+    background-color: #c8b6ff;
     transition: background-color 0.2s;
     text-decoration: none;
-    border-right: 1px solid #bbb;
+    border-right: 1px solid white;
 }
 .navbar :hover {
-    background-color: #c8b6ff;
+    background-color: #9879f7;
     border-radius: 12px;
     color: black;
 }
+.user {
+    float: left;
+    display: block;
+    width: 100%;
+    text-align: end;
+    background-color: #c8b6ff;
+    padding-bottom:10px;
+}
+
 ul {
     list-style-type: none;
     margin: 0;
@@ -53,40 +62,26 @@ ul {
     background-color: #ffd6ff;
 }
 
-li a {
-    /* padding-left: 200px;
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px;
-    font-family: "Roboto";
-    font-size: larger;
-    background-color: #8F00ff;
-    transition: background-color 0.2s;
-    text-decoration: none;
-    border-radius: 12px; */
+.user a {
     float: right;
     display: block;
-    color: white;
-    font-family: "Roboto";
+    color: black;
+    font-family: "Poppins";
     font-size: larger;
-    margin-bottom:15px;
-    margin-left: 90%;
-    background-color: #8F00ff;
+    padding: 10px;
+    margin-right: 30px;
+    margin-left: 15px;
+    border-radius: 12px;
+    background-color: #9879f7;
     transition: background-color 0.2s;
     text-decoration: none; 
 }
 li a:hover, li a:active {
     background-color: white;
     border-radius: 12px;
-    color: #c8b6ff;
+    color: black;
 }
 
-.user {
-    font-family: "Roboto";
-    font-size: larger;
-    text-align: center;
-}
 .listname {
     margin: auto;
     width: 50%;
@@ -109,4 +104,14 @@ th{
 }
 td{
     width: 12%;
+}
+td button{
+    background-color: #bdccd5;
+    font-size: medium;
+    color: black;
+}
+button{
+    font-size: medium;
+    background-color: #bdccd5;
+    color: black;
 }
