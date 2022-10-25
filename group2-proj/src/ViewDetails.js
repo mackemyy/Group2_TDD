@@ -32,12 +32,12 @@ const ViewDetails = (props) => {
             <table data-testid="detailsTable">
                 <thead>
                     <tr>
-                        <th data-testid="tableHeader">ID</th>
+                        <th data-testid="tableHeader" class="thleft">ID</th>
 						<th>Name</th>
 						<th>Username</th>
                         <th>Phone</th>
                         <th>Email</th>
-						<th>Website</th>
+						<th class="thright">Website</th>
                         {/* <th>Address</th> */}
                     </tr>
                 </thead>

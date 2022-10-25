@@ -124,9 +124,10 @@ table{
     display: block;
     white-space: nowrap;
     border-color: transparent;
-    background-color: inherit;
+    background-color: white;
     border-collapse: collapse;
-    
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
 }
 th{
     background-color: #D9C4EC;
@@ -137,11 +138,11 @@ th{
 }
 .thleft{
     border-top-left-radius: 25px;
-    border-bottom-left-radius: 25px;
+    
 }
 .thright{
     border-top-right-radius: 25px;
-    border-bottom-right-radius: 25px;
+    
 }
 td{
     width: 12%;
@@ -151,7 +152,8 @@ tr{
     transition: 0.2s;
 }
  table tr:hover{
-    background-color: white;
+    background-color: rgb(234, 234, 234);
+    
 }
 td button{
     background-color: #bdccd5;
@@ -162,7 +164,10 @@ button{
     font-size: medium;
     background-color: #bdccd5;
     color: black;
-    
+
+}
+.btnDetails{
+    width: auto;
 }
 .back {
     margin-left: 45%;
@@ -170,4 +175,7 @@ button{
 thead, tbody{
     border-style: none;
     border-color: transparent;
+}
+.tableContainer{
+    background-color: #00b4d8;
 }
