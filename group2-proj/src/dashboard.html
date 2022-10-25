@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins">
+    
+    <style type=text/css>
+        html, body{
+            height: 100%;
+            margin: 0px;
+            overflow-y: hidden;
+            
+        }
+        div{
+            font-family: "Poppins";
+        }
+        .topnav{
+            display: flex;
+            text-align: right;
+            height:10%; width: 100%;
+            margin-top:5px;
+            padding: 0px;
+            align-items: center;    /* aligns vertically */
+            justify-content: center;
+        }
+        .content{
+            display: flex;
+            height:90%; width:100%;
+            background-color: white;
+            align-items: center;    /* aligns vertically */
+            justify-content: center;
+        }
+        .container{
+            
+            height:95%; width: 95%;
+            box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 20px 50px 0 rgba(0,0,0,0.19);
+            border-radius: 25px;
+            background-color: white;
+            
+        }
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            background-color: #FF005B;
+        }
+    
+    </style>
+
+    <title>
+
+    </title>
+    <head>
+
+    </head>
+    <body>
+        <div class="left" style="float: left;">
+            <div>
+                <h1 style="text-align:center; color:black; padding-bottom: 10%;">Custom App</h1>
+                <br/>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">News</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">About</a></li>
+                  </ul>
+                  
+            </div>
+
+        </div>
+        <div class="right" style="float: left">
+            <div class="topnav">
+                <div class="container">
+                    <div style="float:left;">
+                        <h1> Viewing Users</h1>
+
+                    </div>
+                    <div>
+                        <a href="#">Logout</a>
+                        <p>Welcome User</p>
+                    </div>
+                </div>
+            </div>
+            <div class="content">
+                <!-- put table here within div, div has shadows -->
+                <div class="container">
+                    <table>
+                        <tr>
+                          <th>ID</th>
+                          <th>Name</th>
+                          <th>Username</th>
+                          <th>Email</th>
+                          <th>Phone</th>
+                          <th>Action</th>
+                        </tr>
+                        <tr>
+                          <td>1</td>
+                          <td>John Doe</td>
+                          <td>John_Doe</td>
+                          <td>johndoe@gmail.com</td>
+                          <td>+639123456789</td>
+                          <td><a href=#>View Details</a></td>
+                        </tr>
+                      </table>
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>

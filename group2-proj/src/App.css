@@ -1,43 +1,84 @@
-.App {
+
+html, body{
+  height:100%;
+  min-height:100%;
+  overflow: hidden;
+}
+body{
+  background-image: linear-gradient(to right top, #0579c0, #7295ce, #a8b3dc, #d4d5ea, #f9f9f9);
+  position: relative;
+  margin: 0px;
+}
+.left{
+  height: 100%; width:60%;
+  background-color: white;
+  border-top-left-radius: inherit;
+  border-bottom-left-radius: inherit;
+  float: left;
+}
+.right{
+background-color: #00b4d8;
+color: white;
+height: 100%; width: 40%;
+padding-left: 20px;
+box-sizing: border-box;
+border-top-right-radius: inherit;
+border-bottom-right-radius: inherit;
+float: right;
+}
+div{
+font-family: "Poppins";
+
+}
+.center{
+position: fixed;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+height:70%; width: 70%;
+background-color: inherit;
+position: absolutes;
+border-radius: 30px;
+border-style: none;
+box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 20px 50px 0 rgba(0,0,0,0.19);
+}
+.container{
+padding-left: 20px;
+padding-right: 20px;
+padding-top: 23px;
+}
+input{
+border-radius: 25px;
+border-style: none;
+height: 30px;
+width: 60%;
+padding: 5px 5px 5px 5px;
+}
+.container img{
+  margin-left: 15%;
+  margin-right: 15%;
+
+}
+.container h1{
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+button{
+font-family: "Poppins";
+border-radius: 25px;
+border-style: none;
+font-size: large;
+background-color: #bdccd5;
+color: white;
+height: 50px;
+width: 100px;
+transition: ease-in-out, width .10s ease-in-out;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+button:hover{
+height: 50px;
+width: 110px;
+box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 20px 50px 0 rgba(0,0,0,0.19);
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-table, th, td {
-  border: 2px solid black;
-  border-collapse: collapse;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+button:active {
+background-color: #9c9290;
+transform: translateY(4px);
 }
