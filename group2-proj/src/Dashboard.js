@@ -3,7 +3,6 @@ import './Dashboard.css';
 import FetchRecords from "./FetchRecords";
 
 const Dashboard = (props) => { 
-
     
 	const [token, setToken] = useState(props ? props.token : ''); 
 	const onLogout = (evt) => {
@@ -17,7 +16,6 @@ const Dashboard = (props) => {
 	return(
 		<>
 			<div class = "header">
-				{/* <h1>Menu</h1> */}
 				<ul class = "navbar">
 					<li class = "list">Home</li>
                     <li class = "list">News</li>
@@ -29,7 +27,7 @@ const Dashboard = (props) => {
 						Logout
 					</button></li>
 				</ul>
-				<div class = "username" data-testid="token">User Token:  {token} </div> 
+				<div class="username" data-testid="token">User Token:  {token} </div> 
 			</div>
 			<ul class="listname">
 				{

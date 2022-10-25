@@ -35,7 +35,6 @@ const FetchRecords = () => {
 			
 			<h2>List of Students</h2>
 			<table data-testid="dashboardTable">
-			
 				<thead>
 					<tr>
 						<th data-testid="tableHeader" class ="thleft">ID</th>
@@ -47,13 +46,12 @@ const FetchRecords = () => {
 				</thead>
 				<tbody>
 					{ records.length && records.map((records, i)=> (
-						<tr>
-							<td key={i}data-testid="user">{records.id}</td>
-							<td key={i}data-testid="user">{records.name}</td>
-							<td key={i}data-testid="user">{records.username}</td>
-							<td key={i}data-testid="user">{records.email}</td>
+						<tr key={i}>
+							<td data-testid="userID">{records.id}</td>
+							<td data-testid="name">{records.name}</td>
+							<td data-testid="username">{records.username}</td>
+							<td data-testid="email">{records.email}</td>
 							<td><button data-testid="view-details-btn" onClick={handleViewDetails.bind(this, records.id)} class="btnDetails">View Details</button></td>
-							{/* <td><a href="#\" data-testid="viewDetails" onClick={handleViewDetails.bind(this, records.id)}>View Details</a></td> */}
 						</tr>
 					))}
 				</tbody>
