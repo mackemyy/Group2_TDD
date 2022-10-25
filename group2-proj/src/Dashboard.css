@@ -132,8 +132,16 @@ th{
     background-color: #D9C4EC;
     border-style: none;
     text-align: center;
-    padding: 5px;
+    padding: 10px;
 
+}
+.thleft{
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+}
+.thright{
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
 }
 td{
     width: 12%;
@@ -154,10 +162,7 @@ button{
     font-size: medium;
     background-color: #bdccd5;
     color: black;
-    width: auto;
-}
-button:hover{
-
+    
 }
 .back {
     margin-left: 45%;

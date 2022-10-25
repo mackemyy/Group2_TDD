@@ -36,11 +36,11 @@ const FetchRecords = () => {
 			<h2>List of Students</h2>
 				<thead>
 					<tr>
-						<th data-testid="tableHeader">ID</th>
+						<th data-testid="tableHeader" class ="thleft">ID</th>
 						<th>Name</th>
 						<th>Username</th>
 						<th>Email</th>
-						<th>Action</th>
+						<th class="thright">Action</th>
 					</tr>
 				</thead>
 				<tbody>
