@@ -64,9 +64,9 @@ const Login = () => {
 
 	return !showDashboard ? ( 
 		<>
-			<div class="center">
-				<div class="left">
-					<div class="container">
+			<div className="center">
+				<div className="left">
+					<div className="container">
 						<h1>Welcome to React Learning Center</h1>
 						<img 
       src="https://img.freepik.com/free-vector/audience-segmentation-abstract-concept-illustration_335657-3745.jpg?w=740&t=st=1666622720~exp=1666623320~hmac=2a25d4a816507599a6f56f61ec4e4c7fb60e64909aea3c9219422977cf980c67" 
@@ -75,7 +75,7 @@ const Login = () => {
       />
 					</div>
 				</div>
-				<div class='right'>
+				<div className='right'>
 					<h1>Email:</h1>
 					<input 
 						placeholder="Enter Email"
