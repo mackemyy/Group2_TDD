@@ -79,6 +79,7 @@ ul {
     padding: 0;
     width: 100%;
     background-color: #ffd6ff;
+    border-radius: 25px;
 }
 
 .button {
@@ -122,16 +123,27 @@ table{
     text-align: center;
     display: block;
     white-space: nowrap;
+    border-color: transparent;
+    background-color: inherit;
+    border-collapse: collapse;
+    
 }
 th{
     background-color: #D9C4EC;
     border-style: none;
     text-align: center;
-    border: 1px solid ;
+    padding: 5px;
+
 }
 td{
     width: 12%;
-    border-left: 1px solid;
+    
+}
+tr{
+    transition: 0.2s;
+}
+ table tr:hover{
+    background-color: white;
 }
 td button{
     background-color: #bdccd5;
@@ -142,7 +154,15 @@ button{
     font-size: medium;
     background-color: #bdccd5;
     color: black;
+    width: auto;
+}
+button:hover{
+
 }
 .back {
     margin-left: 45%;
+}
+thead, tbody{
+    border-style: none;
+    border-color: transparent;
 }
