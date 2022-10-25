@@ -24,7 +24,7 @@ const Dashboard = (props) => {
                     <li class = "list">Contact</li>
 					<li><a href='#\' onClick={onLogout}>Logout</a></li>
 				</ul>
-				<li class = "user">user {token} </li> 
+				<div class = "username">User {token} </div> 
 			</div>
 			<ul class="listname">
 				{

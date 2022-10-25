@@ -33,7 +33,7 @@ const FetchRecords = () => {
 	return !showViewDetails ? (
 		<>
 			<table data-testid="dashboardTable">
-			<h2>List of Customers</h2>
+			<h2>List of Students</h2>
 				<thead>
 					<tr>
 						<th data-testid="tableHeader">ID</th>
