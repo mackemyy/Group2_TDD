@@ -11,17 +11,17 @@ describe("Testing a fetch...", ()=>{
 	
 	afterEach(cleanup); //clear garbage collection side effects, for async await
 
-	it("test dynamic list...", async () => {   
-		render(<FetchRecords />);	
+	// it("test dynamic list...", async () => {   
+	// 	render(<FetchRecords />);	
 
-		// screen.debug(); // display dom in cmd/cli
+	// 	// screen.debug(); // display dom in cmd/cli
 
-		// Async/await
-		// a programming pattern that will allow async processes to behave like sync.
-		// waitFor() - if you need to wait and check for the results of an async..await
-	    // expect(await screen.findByText('Leanne Graham')).toBeInTheDocument();
-		await waitFor(() => expect(screen.getAllByRole('listitem').length).toBe(10));
-	});
+	// 	// Async/await
+	// 	// a programming pattern that will allow async processes to behave like sync.
+	// 	// waitFor() - if you need to wait and check for the results of an async..await
+	//     // expect(await screen.findByText('Leanne Graham')).toBeInTheDocument();
+	// 	await waitFor(() => expect(screen.getAllByTestId('user').length).toBe(10));
+	// });
 });
 
 
@@ -55,6 +55,7 @@ describe("Testing results after fetch...", ()=>{
 
 
 	it("Check total no of users in list...", async () => {  
+		render(<FetchRecords />);
 		const users = await waitFor(() => screen.getAllByTestId('user'));
 		expect(users.length).toEqual(10);
 	});
