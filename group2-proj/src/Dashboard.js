@@ -22,7 +22,7 @@ const Dashboard = (props) => {
 					<li class = "list">Home</li>
                     <li class = "list">News</li>
                     <li class = "list">Contact</li>
-					<li><button
+					<li><button class ="button"
 						onClick={onLogout} 
 						data-testid="logout-btn"
 					>

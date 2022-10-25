@@ -81,10 +81,10 @@ ul {
     background-color: #ffd6ff;
 }
 
-li a {
+.button {
     font-family: 'Poppins';
-    float: left;
-    margin-left: 75%;
+    float: right;
+    margin-right: 10mm;
     display: block;
     color: black;
     text-align: center;
@@ -93,10 +93,10 @@ li a {
     transition: background-color 0.2s;
     text-decoration: none;
     border-radius: 12px;
-    border: 1px solid white;
+    border-right: 1px solid white;
 }
-li a:hover, li a:active {
-    background-color: white;
+.button:hover, .button:active {
+    background-color: #9879f7;
     border-radius: 12px;
     color: black;
 }
