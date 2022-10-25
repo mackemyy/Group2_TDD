@@ -98,8 +98,8 @@ const Login = () => {
 					>
 						Login
 					</button>
-					<br/>
-					<h2 data-testid="result">Server Reply: {result}</h2>
+					<br/><br/>
+					<h2 data-testid="result" class="result">Server Reply: {result}</h2>
 				</div>
 			</div>
 		</>
