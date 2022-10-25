@@ -24,11 +24,11 @@ const Dashboard = (props) => {
                     <li class = "list">Contact</li>
 					<li><a href='#\' onClick={onLogout}>Logout</a></li>
 				</ul>
-				<ul>
-					<li class = "user">user {token}</li>
-				</ul>
+				<div class = "user">
+					<p class = "username">User {token}</p>
+				</div>
 			</div>
-			<h2>List of Customers</h2>
+			<h2>List of Students</h2>
 			<ul class="listname">
 				{
 					<FetchRecords/>

@@ -56,7 +56,7 @@ const FetchRecords = () => {
 				</tbody>
 				
 			</table>
-			<h2 data-testid="total-users">Total Customers: {totalUsers}</h2>
+			<h2 data-testid="total-users">Total Students: {totalUsers}</h2>
 		</>
 	): (
 		<ViewDetails indivUser={userID} viewTable={handleBackToDashboard}/>
