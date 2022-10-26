@@ -15,19 +15,18 @@ const Dashboard = (props) => {
 
 	return(
 		<>
-			<div className= "header">
-				<ul className= "navbar">
-					<li className= "list">Home</li>
-                    <li className= "list">News</li>
-                    <li className= "list">Contact</li>
-					<li><button className="button"
+			<div class = "header">
+				{/* <h1>Menu</h1> */}
+				<div class = "navbar">
+					<li class = "title">React Learning Center</li>
+					<li><button class ="button"
 						onClick={onLogout} 
 						data-testid="logout-btn"
 					>
 						Logout
 					</button></li>
 				</ul>
-				<div className="token" data-testid="token">User Token: {token}</div> 
+				<div class = "username" data-testid="token">User Token:  {token} </div> 
 			</div>
 			<ul className="listname">
 				{

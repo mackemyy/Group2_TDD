@@ -21,10 +21,14 @@ background-color: #00b4d8;
 color: white;
 height: 100%; width: 40%;
 padding-left: 20px;
+padding-top:15mm;
 box-sizing: border-box;
 border-top-right-radius: inherit;
 border-bottom-right-radius: inherit;
 float: right;
+}
+.result{
+  font-size: large;
 }
 div{
 font-family: "Poppins";
@@ -55,9 +59,22 @@ width: 60%;
 padding: 5px 5px 5px 5px;
 }
 .container img{
-  margin-left: 15%;
+  margin-left: 7%;
   margin-right: 15%;
 
+}
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 .container h1{
   text-align: center;

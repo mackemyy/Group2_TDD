@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-
+import './ViewDetails.css';
 import Dashboard from './Dashboard';
 
 const ViewDetails = (props) => {
@@ -28,28 +28,37 @@ const ViewDetails = (props) => {
 
     return !showDashboard ? (
         <>
-			<h1>Information of the Students</h1>
-            <table data-testid="detailsTable">
-                <thead>
-                    <tr>
-                        <th data-testid="tableHeader" className="thleft">ID</th>
-						<th>Name</th>
-						<th>Username</th>
-                        <th>Phone</th>
-                        <th>Email</th>
-						<th className="thright">Website</th>
-                        {/* <th>Address</th> */}
-                    </tr>
-                </thead>
+			<h1>Information of the Student</h1>
+            <img src="https://o.remove.bg/downloads/46122c04-ad3b-4f26-9b85-79ae61db875f/image_2022-10-26_153632351-removebg-preview.png"  alt="profilepic" 
+			height={250}
+            width={350}
+            className="stud"
+      		/> 
+            <table data-testid="detailsTable" className='studDetailTable'>
                 <tbody>
                     <tr>
-                        <td data-testid="userID">{userDetails.id}</td>
-                        <td>{userDetails.name}</td>
+                    <th data-testid="tableHeader" >ID</th>
+                        <td>{userDetails.id}</td>
+                    </tr>
+                    <tr>
+                    <th >Name</th>
+                        <td data-testid="userID">{userDetails.name}</td>
+                    </tr>
+                    <tr>
+                    <th>Username</th>
                         <td>{userDetails.username}</td>
+                    </tr>
+                <tr>
+                    <th>Phone</th>
                         <td>{userDetails.phone}</td>
+                    </tr>
+                    <tr>
+                    <th>Email</th>
                         <td>{userDetails.email}</td>
+                    </tr>
+                    <tr>
+                    <th>Website</th>
                         <td>{userDetails.website}</td>
-                        {/* <td>{userDetails.address.street}</td> */}
                     </tr>
                 </tbody>
 			</table>

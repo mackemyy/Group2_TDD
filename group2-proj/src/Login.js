@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import logo from './logo.svg';
 import Dashboard from './Dashboard';
 
 
@@ -68,11 +68,9 @@ const Login = () => {
 				<div className="left">
 					<div className="container">
 						<h1>Welcome to React Learning Center</h1>
-						<img 
-      src="https://img.freepik.com/free-vector/audience-segmentation-abstract-concept-illustration_335657-3745.jpg?w=740&t=st=1666622720~exp=1666623320~hmac=2a25d4a816507599a6f56f61ec4e4c7fb60e64909aea3c9219422977cf980c67" 
-	  height={350}
-      alt="new"
-      />
+						<img src={logo} className="App-logo" alt="logo" 
+						height={350}
+      					/>
 					</div>
 				</div>
 				<div className='right'>
@@ -100,8 +98,8 @@ const Login = () => {
 					>
 						Login
 					</button>
-					<br/>
-					<h2 data-testid="result">Server Reply: {result}</h2>
+					<br/><br/>
+					<h2 data-testid="result" class="result">Server Reply: {result}</h2>
 				</div>
 			</div>
 		</>

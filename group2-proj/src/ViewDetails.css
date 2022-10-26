@@ -1,0 +1,18 @@
+.studDetailTable {
+    width: 50%;
+    float: right;
+    margin-top: 12.5mm;
+}
+.studDetailTable td {
+    border: 1px solid;
+    width: 100%;
+    border-radius: 30px;
+}
+.studDetailTable th {
+    border-radius: 30px;
+    border-style: none;
+}
+.stud {
+    float: left;
+    margin-left: -10mm;
+}
