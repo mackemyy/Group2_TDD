@@ -1,51 +1,80 @@
 /* eslint-disable testing-library/no-debugging-utils */
 /* eslint-disable testing-library/prefer-find-by */
 /* eslint-disable testing-library/no-await-sync-query */
-import { render, screen, cleanup, waitFor, fireEvent } from "@testing-library/react";
+import { render, screen, cleanup, waitFor, fireEvent, getByText } from "@testing-library/react";
 import FetchRecords from "./FetchRecords";
 import Dashboard from "./Dashboard";
 import ViewDetails from "./ViewDetails";
 import Login from "./Login";
 
-// describe("Testing a fetch...", ()=>{
-	
-// 	afterEach(cleanup); //clear garbage collection side effects, for async await
-
-// 	it("test dynamic list...", async () => {   
-// 		render(<FetchRecords />);	
-
-// 		// screen.debug(); // display dom in cmd/cli
-
-// 		// Async/await
-// 		// a programming pattern that will allow async processes to behave like sync.
-// 		// waitFor() - if you need to wait and check for the results of an async..await
-// 	    // expect(await screen.findByText('Leanne Graham')).toBeInTheDocument();
-// 		await waitFor(() => expect(screen.getAllByTestId('user').length).toBe(10));
-// 	});
-// });
-
-
-describe("Testing results after fetch...", ()=>{
-	
+describe("Check Login UI", () => {
 	afterEach(cleanup);
 
-	it("Has an email input field in login", ()=> {
+	it("Has an email input field", () => {
 		render(<Login/>);
 		const email = screen.getByTestId("email");
 		expect(email).toBeInTheDocument();
 	});
 
-	it("Has an password input field in login", ()=> {
+	it("Simulate an email data input", () => {		
+		render(<Login />);
+		const email_input = screen.getByTestId("email");
+		fireEvent.change(email_input, { target: { value: "eve.holt@reqres.in" }});
+		expect(email_input.value).toBe("eve.holt@reqres.in");
+	});
+
+	it("Has an input field for password",()=>{
+		render(<Login />);
+		const password = screen.getByTestId("password");
+		expect(password).toBeInTheDocument();
+	});
+
+	it("Simulate a password data input", () => {		
+		render(<Login />);
+		const pword_input = screen.getByTestId("password");
+		fireEvent.change(pword_input, { target: { value: "cityslicka" }});
+		expect(pword_input.value).toBe("cityslicka");
+	});
+
+	it("Has a login button", async () => {
 		render(<Login/>);
-		const pword = screen.getByTestId("password");
-		expect(pword).toBeInTheDocument();
+		const loginBtn = screen.getByTestId('send-user-login');
+		expect(loginBtn).toBeInTheDocument();
 	});
 
-	it("Check if user Leanne Graham exists...", async () => {   
-		render(<FetchRecords />);	
-	    expect(await screen.findByText('Leanne Graham')).toBeInTheDocument();
+});
+
+describe("Check if fetching of list was successfull", () => {
+	afterEach(cleanup);
+
+	it("Has an initial no of users in the list of 0", async () => {  
+		render(<FetchRecords />);
+		expect(await screen.getByTestId("total-users")).toHaveTextContent("Total Students: 0"); 	
 	});
 
+	it("Has a total no of users in the list of 10", async () => {  
+		render(<FetchRecords />);
+		const users = await waitFor(() => screen.getAllByTestId('userID'));
+		expect(users.length).toEqual(10);
+	});
+})
+
+describe("Simulating retrieval of one entry", () => {
+	afterEach(cleanup);
+
+	it("Checks if a user named Leanne Graham exist", async () => {
+		render(<FetchRecords/>);
+		expect(await screen.findByText('Leanne Graham')).toBeInTheDocument();
+	});
+
+	it("Checks if another user named Clementina DuBuque exist", async () => {
+		render(<FetchRecords/>);
+		expect(await screen.findByText('Clementina DuBuque')).toBeInTheDocument();
+	});
+})
+
+describe("Checking for routing buttons", () => {
+	afterEach(cleanup);
 
 	it("Has a logout button", async () => {
 		render(<Dashboard/>);
@@ -53,55 +82,33 @@ describe("Testing results after fetch...", ()=>{
 		expect(logoutBtn).toBeInTheDocument();
 	});
 
-	// afterEach(cleanup);
-	it("Check total no of users in list...", async () => {  
-		render(<FetchRecords />);
-		const users = await waitFor(() => screen.getByTestId('total-users'));
-		expect(users.length).toEqual(10);
-	});
-
-	it("Check is there is back to dashboard button", async () => {
+	it("Has a back to dashboard button", async () => {
 		render(<ViewDetails/>);
 		const backBtn = screen.getByTestId('back-dashboard-btn');
 		expect(backBtn).toBeInTheDocument();
 	});
 
-
 });
 
 describe("Checking if token is given upon login...", ()=> {
-	afterEach(cleanup)
+	afterEach(cleanup);
 
-	it("Receives token", async () => {
-		// render(<Login/>);
+	it("Check if valid user with token", async () => {   
+		render(<Login />);
 
-		// const eInput = screen.getByTestId('email');
-		// const pInput = screen.getByTestId('password');
+		const email_input = screen.getByTestId("email");
+		fireEvent.change(email_input, { target: { value: "eve.holt@reqres.in" }});
+		expect(email_input.value).toBe("eve.holt@reqres.in");
 
-		// fireEvent.change(eInput, { target: { value: "eve.holt@reqres.in" }});
-		// expect(eInput.value).toBe("eve.holt@reqres.in");
+		const pass = screen.getByTestId("password");
+		fireEvent.change(pass, { target: { value: "eve.holt@reqres.in" }});
+		expect(pass.value).toBe("eve.holt@reqres.in");
 
-		// fireEvent.change(pInput, { target: { value: "cityslicka" }});
-		// expect(pInput.value).toBe("cityslicka");
+		const loginBtn = screen.getByTestId('send-user-login');
+		fireEvent.click(loginBtn);
 
-		// const loginBtn = screen.getByTestId("send-user-login");
-		// fireEvent.click(loginBtn);
-
-		// const res = screen.getByTestId('result');
-		// expect(res).toBeInTheDocument();
-
-		// expect(screen.getByTestId("result")).toHaveTextContent("Server Reply: QpwL5tke4Pnpja7X4");
-
-		render(<Dashboard/>);
-		expect(await screen.getByTestId("token")).toHaveTextContent("User Token: QpwL5tke4Pnpja7X4");
-		
-		// expect(await screen.findByText('QpwL5tke4Pnpja7X4')).toBeTruthy();
-		// const token = screen.getByTestId('token');
-		// expect(token).toBeInTheDocument();
-
-		// expect(await screen.getByTestId("token")).toHaveTextContent("User Token: QpwL5tke4Pnpja7X4");
+		await waitFor(async () => {
+		    expect(await screen.findByText('QpwL5tke4Pnpja7X4')).toBeTruthy() 
+		});
 	});
-
-	
-
 });
