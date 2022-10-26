@@ -31,38 +31,37 @@ const FetchRecords = () => {
 	},[]);
 
 	return !showViewDetails ? (
-		<>
-			<table data-testid="dashboardTable" className='dashboardTable'>
-			<h2>List of Students</h2>
-			<table data-testid="dashboardTable">
-				<thead>
-					<tr>
-						<th data-testid="tableHeader" className="thleft">ID</th>
-						<th>Name</th>
-						<th>Username</th>
-						<th>Email</th>
-						<th className="thright">Action</th>
-					</tr>
-				</thead>
-				<tbody>
-					{ records.length && records.map((records, i)=> (
-						<tr key={i}>
-							<td data-testid="userID">{records.id}</td>
-							<td data-testid="name">{records.name}</td>
-							<td data-testid="username">{records.username}</td>
-							<td data-testid="email">{records.email}</td>
-							<td><button data-testid="view-details-btn" onClick={handleViewDetails.bind(this, records.id)} className="btnDetails">View Details</button></td>
-						</tr>
-					))}
-				</tbody>
-				
-			</table>
-			<h2 data-testid="total-users">Total Students: {totalUsers}</h2>
-		</>
-	) : 
-	(
-		<ViewDetails indivUser={userID} viewTable={handleBackToDashboard}/>
-	)
+        <>
+            <table data-testid="dashboardTable" className='dashboardTable'>
+            <h2>List of Students</h2>
+                <thead>
+                    <tr>
+                        <th data-testid="tableHeader">ID</th>
+                        <th>Name</th>
+                        <th>Username</th>
+                        <th>Email</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    { records.length && records.map((records, i)=> (
+                        <tr>
+                            <td key={i}data-testid="user">{records.id}</td>
+                            <td key={i}data-testid="user">{records.name}</td>
+                            <td key={i}data-testid="user">{records.username}</td>
+                            <td key={i}data-testid="user">{records.email}</td>
+                            <td><button data-testid="view-details-btn" onClick={handleViewDetails.bind(this, records.id)}>View Details</button></td>
+                            {/* <td><a href="#" data-testid="viewDetails" onClick={handleViewDetails.bind(this, records.id)}>View Details</a></td> */}
+                        </tr>
+                    ))}
+                </tbody>
+
+            </table>
+            <h2 data-testid="total-users">Total Students: {totalUsers}</h2>
+        </>
+    ): (
+        <ViewDetails indivUser={userID} viewTable={handleBackToDashboard}/>
+    )
 };
 
 export default FetchRecords;
