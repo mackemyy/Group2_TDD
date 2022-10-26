@@ -1,0 +1,13 @@
+.studDetailTable {
+    width: 50%;
+    float: right;
+    margin-top: 12.5mm;
+}
+td {
+    border: 1px solid;
+    width: 100%;
+}
+.stud {
+    float: left;
+    margin-left: -10mm;
+}

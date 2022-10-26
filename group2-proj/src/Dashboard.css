@@ -120,6 +120,7 @@ th{
     text-align: center;
     border: 1px solid ;
 }
+
 td{
     width: 12%;
     border-left: 1px solid;
@@ -139,5 +140,5 @@ button{
 }
 
 .stud {
-    padding-left: 20mm;
+    padding-left: 5mm;
 }
