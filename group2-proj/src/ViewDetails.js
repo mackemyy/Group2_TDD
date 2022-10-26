@@ -28,7 +28,7 @@ const ViewDetails = (props) => {
 
     return !showDashboard ? (
         <>
-			<h1>Information of the Students</h1>
+			<h1>Information of the Student</h1>
             <img src="https://o.remove.bg/downloads/46122c04-ad3b-4f26-9b85-79ae61db875f/image_2022-10-26_153632351-removebg-preview.png"  alt="profilepic" 
 			height={250}
             width={350}
