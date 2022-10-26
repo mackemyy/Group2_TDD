@@ -32,12 +32,12 @@ const ViewDetails = (props) => {
             <table data-testid="detailsTable">
                 <thead>
                     <tr>
-                        <th data-testid="tableHeader">ID</th>
+                        <th data-testid="tableHeader" className="thleft">ID</th>
 						<th>Name</th>
 						<th>Username</th>
                         <th>Phone</th>
                         <th>Email</th>
-						<th>Website</th>
+						<th className="thright">Website</th>
                         {/* <th>Address</th> */}
                     </tr>
                 </thead>
@@ -53,8 +53,7 @@ const ViewDetails = (props) => {
                     </tr>
                 </tbody>
 			</table>
-            <button class="back" data-testid="back-dashboard-btn" onClick={onViewTable}>Back to Dashboard</button>
-            {/* <a href='#\' data-testid="dashboardLink" onClick={onViewTable}>Back to Dashboard</a> */}
+            <button className="back" data-testid="back-dashboard-btn" onClick={onViewTable}>Back to Dashboard</button>
 
         </>
     ) : (

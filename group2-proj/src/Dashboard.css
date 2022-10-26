@@ -58,7 +58,7 @@ body {
     border-radius: 12px;
     color: black;
 }
-.username {
+.token {
     font-family: "Poppins";
     font-size: medium;
     text-align: center;
@@ -79,6 +79,7 @@ ul {
     padding: 0;
     width: 100%;
     background-color: #ffd6ff;
+    border-radius: 25px;
 }
 
 .button {
@@ -122,16 +123,37 @@ table{
     text-align: center;
     display: block;
     white-space: nowrap;
+    border-color: transparent;
+    background-color: white;
+    border-collapse: collapse;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
 }
 th{
     background-color: #D9C4EC;
     border-style: none;
     text-align: center;
-    border: 1px solid ;
+    padding: 10px;
+
+}
+.thleft{
+    border-top-left-radius: 25px;
+    
+}
+.thright{
+    border-top-right-radius: 25px;
+    
 }
 td{
     width: 12%;
-    border-left: 1px solid;
+    
+}
+tr{
+    transition: 0.2s;
+}
+ table tr:hover{
+    background-color: rgb(234, 234, 234);
+    
 }
 td button{
     background-color: #bdccd5;
@@ -142,7 +164,18 @@ button{
     font-size: medium;
     background-color: #bdccd5;
     color: black;
+
+}
+.btnDetails{
+    width: auto;
 }
 .back {
     margin-left: 45%;
+}
+thead, tbody{
+    border-style: none;
+    border-color: transparent;
+}
+.tableContainer{
+    background-color: #00b4d8;
 }
