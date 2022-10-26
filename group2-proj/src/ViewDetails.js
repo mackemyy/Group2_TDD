@@ -28,7 +28,7 @@ const ViewDetails = (props) => {
 
     return !showDashboard ? (
         <>
-			<h1>Information of the Student</h1>
+			<h1 className="tableTitle">Information of the Student</h1>
             <img src="https://o.remove.bg/downloads/46122c04-ad3b-4f26-9b85-79ae61db875f/image_2022-10-26_153632351-removebg-preview.png"  alt="profilepic" 
 			height={250}
             width={350}
@@ -62,7 +62,10 @@ const ViewDetails = (props) => {
                     </tr>
                 </tbody>
 			</table>
-            <button className="back" data-testid="back-dashboard-btn" onClick={onViewTable}>Back to Dashboard</button>
+            <div className='centerthebutton'>
+            <button className="backToDashboard" data-testid="back-dashboard-btn" onClick={onViewTable}>Back to Dashboard</button>
+            </div>
+            
 
         </>
     ) : (

@@ -32,8 +32,8 @@ const FetchRecords = () => {
 
 	return !showViewDetails ? (
         <>
+			<h2 class="tableTitle">List of Students</h2>
             <table data-testid="dashboardTable" className='dashboardTable'>
-            <h2>List of Students</h2>
                 <thead>
                     <tr>
                         <th data-testid="tableHeader">ID</th>
@@ -50,14 +50,14 @@ const FetchRecords = () => {
                             <td key={i}data-testid="user">{records.name}</td>
                             <td key={i}data-testid="user">{records.username}</td>
                             <td key={i}data-testid="user">{records.email}</td>
-                            <td><button data-testid="view-details-btn" onClick={handleViewDetails.bind(this, records.id)}>View Details</button></td>
+                            <td><button  className ="btnDetails" data-testid="view-details-btn" onClick={handleViewDetails.bind(this, records.id)}>View Details</button></td>
                             {/* <td><a href="#" data-testid="viewDetails" onClick={handleViewDetails.bind(this, records.id)}>View Details</a></td> */}
                         </tr>
                     ))}
                 </tbody>
 
             </table>
-            <h2 data-testid="total-users">Total Students: {totalUsers}</h2>
+            <h2  className="tableFooter" data-testid="total-users">Total Students: {totalUsers}</h2>
         </>
     ): (
         <ViewDetails indivUser={userID} viewTable={handleBackToDashboard}/>
