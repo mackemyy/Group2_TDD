@@ -32,7 +32,7 @@ const FetchRecords = () => {
 
 	return !showViewDetails ? (
         <>
-			<h2 class="tableTitle">List of Students</h2>
+			<h2 className="tableTitle">List of Students</h2>
             <table data-testid="dashboardTable" className='dashboardTable'>
                 <thead>
                     <tr>
@@ -45,13 +45,14 @@ const FetchRecords = () => {
                 </thead>
                 <tbody>
                     { records.length && records.map((records, i)=> (
-                        <tr>
-                            <td key={i}data-testid="user">{records.id}</td>
-                            <td key={i}data-testid="user">{records.name}</td>
-                            <td key={i}data-testid="user">{records.username}</td>
-                            <td key={i}data-testid="user">{records.email}</td>
-                            <td><button  className ="btnDetails" data-testid="view-details-btn" onClick={handleViewDetails.bind(this, records.id)}>View Details</button></td>
-                            {/* <td><a href="#" data-testid="viewDetails" onClick={handleViewDetails.bind(this, records.id)}>View Details</a></td> */}
+                        <tr key={i}>
+                            <td data-testid="userID">{records.id}</td>
+                            <td data-testid="name">{records.name}</td>
+                            <td data-testid="username">{records.username}</td>
+                            <td data-testid="email">{records.email}</td>
+                            <td><button className ="btnDetails" data-testid="view-details-btn" 
+								onClick={handleViewDetails.bind(this, records.id)}>View Details</button></td>
+                            
                         </tr>
                     ))}
                 </tbody>

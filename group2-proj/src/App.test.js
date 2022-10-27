@@ -1,7 +1,7 @@
 /* eslint-disable testing-library/no-debugging-utils */
 /* eslint-disable testing-library/prefer-find-by */
 /* eslint-disable testing-library/no-await-sync-query */
-import { render, screen, cleanup, waitFor, fireEvent, getByText } from "@testing-library/react";
+import { render, screen, cleanup, waitFor, fireEvent } from "@testing-library/react";
 import FetchRecords from "./FetchRecords";
 import Dashboard from "./Dashboard";
 import ViewDetails from "./ViewDetails";

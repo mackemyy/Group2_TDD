@@ -99,7 +99,7 @@ const Login = () => {
 						Login
 					</button>
 					<br/><br/>
-					<h2 data-testid="result" class="result">Server Reply: {result}</h2>
+					<h2 data-testid="result" className="result">Server Reply: {result}</h2>
 				</div>
 			</div>
 		</>
