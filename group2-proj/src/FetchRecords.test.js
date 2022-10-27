@@ -101,8 +101,8 @@ describe("Checking if token is given upon login...", ()=> {
 		expect(email_input.value).toBe("eve.holt@reqres.in");
 
 		const pass = screen.getByTestId("password");
-		fireEvent.change(pass, { target: { value: "eve.holt@reqres.in" }});
-		expect(pass.value).toBe("eve.holt@reqres.in");
+		fireEvent.change(pass, { target: { value: "cityslicka" }});
+		expect(pass.value).toBe("cityslicka");
 
 		const loginBtn = screen.getByTestId('send-user-login');
 		fireEvent.click(loginBtn);
