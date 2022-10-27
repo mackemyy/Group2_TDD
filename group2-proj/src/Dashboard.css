@@ -48,11 +48,7 @@ body {
     text-align: center;
     font-size:xx-large;
 }
-.navbar :hover {
-    background-color: #9879f7;
-    border-radius: 12px;
-    color: black;
-}
+
 .token {
     font-family: "Poppins";
     font-size: medium;
