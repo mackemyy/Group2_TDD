@@ -20,7 +20,8 @@
 }
 .stud {
     float: left;
-    margin-left: -10mm;
+    margin-left:10mm;
+    margin-top: 17mm;
 }
 .backToDashboard{
     background-color: #bdccd5;

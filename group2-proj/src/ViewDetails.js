@@ -29,9 +29,9 @@ const ViewDetails = (props) => {
     return !showDashboard ? (
         <>
 			<h1 className="tableTitle">Information of the Student</h1>
-            <img src="https://o.remove.bg/downloads/46122c04-ad3b-4f26-9b85-79ae61db875f/image_2022-10-26_153632351-removebg-preview.png"  alt="profilepic" 
-			height={250}
-            width={350}
+            <img src="https://cdn-icons-png.flaticon.com/512/1053/1053244.png?w=360"  alt="profilepic" 
+			height={225}
+            width={250}
             className="stud"
       		/> 
             <table data-testid="detailsTable" className='studDetailTable'>
